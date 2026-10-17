@@ -1,0 +1,291 @@
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:04:41 +0330
+xrun
+	-clean
+	-sv
+	-access +rwc
+	-timescale 1ns/1ps
+	-top tb_system_g4
+	+define+DIVIDER_POSTSYN
+	-l sim/gate/xrun_divider_postsyn_integration.log
+	-v /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	netlist/fractional_n_divider_postsyn.v
+	rtl/t_flip_flop.v
+	rtl/frac_div_system.v
+	rtl/frac_div_g4_top.sv
+	tb/tb_system_g4.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	module worklib.sdm_mash11:sv
+		errors: 0, warnings: 0
+file: netlist/fractional_n_divider_postsyn.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_g4_top.sv
+	module worklib.frac_div_g4_top:sv
+		errors: 0, warnings: 0
+file: tb/tb_system_g4.sv
+	module worklib.tb_system_g4:sv
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFNRX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_system_g4
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "netlist/fractional_n_divider_postsyn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     fractional_n_divider_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_system_g4.dut.u_div_system.u_div
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (53)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 30>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (negedge CKN) (80)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 31>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (102)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 81>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 136>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 137>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (posedge CK) (95)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 162>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge SN) (posedge CK) (59)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 163>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (114)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 197>.
+	Annotation completed with 0 Errors and 12 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 40      	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (40/40) 
+		 No. of Tchecks    = 52      	 No. of Disabled Tchecks    = 0        Annotated = 88.46% (46/52) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	            40	             0	                40	                100.00
+		      $width	            18	             0	                18	                100.00
+		  $setuphold	            34	             0	                28	                 82.35
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.sdm_mash11:sv <0x50b13fc3>
+			streams:  12, words:  6148
+		worklib.tb_system_g4:sv <0x2b2d0127>
+			streams:  18, words: 46517
+		tsmc18.SDFFRHQX1:v <0x5796f4e7>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x4aa9e2a0>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x607f18cd>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQXL:v <0x0734d243>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x0b53d452>
+			streams:   0, words:     0
+		tsmc18.SDFFNRX1:v <0x3e7ee524>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                22      19
+		UDPs:                   10       2
+		Primitives:             58       6
+		Timing outputs:         17      11
+		Registers:              73      73
+		Scalar wires:           49       -
+		Expanded wires:          2       1
+		Vectored wires:          4       -
+		Always blocks:           9       9
+		Initial blocks:          7       7
+		Cont. assignments:       4       4
+		Pseudo assignments:      4       4
+		Timing checks:          86      28
+		Interconnect:           45       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_system_g4:sv
+Loading snapshot worklib.tb_system_g4:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 integration: G4 RTL SDM + POST-SYN divider + T-FF
+============================================================
+
+------------------------------------------------------------
+CASE: Zero  epsilon=0x000000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25  epsilon=0x200000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25  epsilon=0xe00000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Plus_50ppm  epsilon=0x0001a3  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Minus_50ppm  epsilon=0xfffe5d  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Zero_Dither  epsilon=0x000000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25_Dither  epsilon=0x200000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25_Dither  epsilon=0xe00000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_50ppm_Dither  epsilon=0x0001a3  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_50ppm_Dither  epsilon=0xfffe5d  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+ -> PASS: gate-level period behavior passed without runt pulses
+ -> PASS: no invalid command was observed in any integration case
+
+============================================================
+G4 INTEGRATION RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 856708018207 PS + 2
+./tb/tb_system_g4.sv:534         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:04:44 +0330  (total: 00:00:03)

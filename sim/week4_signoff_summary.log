@@ -1,0 +1,12 @@
+[PASS] G4 standalone RTL                  sim/rtl/g4_standalone_fast.log
+[PASS] Divider RTL                        sim/rtl/tb_frac_div_system.log
+[PASS] G4 RTL integration                 sim/rtl/tb_system_g4.log
+[PASS] Divider netlist                    netlist/fractional_n_divider_postsyn.v
+[PASS] Divider SDF                        netlist/fractional_n_divider_postsyn.sdf
+[PASS] Area report                        sim/gate/fractional_n_divider_area.rpt
+[PASS] Timing report                      sim/gate/fractional_n_divider_timing.rpt
+[PASS] Divider gate/SDF                   sim/gate/tb_frac_div_system_gate.log
+[PASS] G4 postsyn integration             sim/gate/tb_system_g4_postsyn.log
+[PASS] Divider postsyn integ.             sim/gate/tb_system_divider_postsyn.log
+[PASS] Both postsyn integration           sim/gate/tb_system_both_postsyn.log
+WEEK4_SERVER_EVIDENCE_COMPLETE

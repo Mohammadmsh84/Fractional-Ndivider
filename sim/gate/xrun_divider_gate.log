@@ -1,0 +1,183 @@
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:04:30 +0330
+xrun
+	-clean
+	-sv
+	-access +rwc
+	-timescale 1ns/1ps
+	-top tb_frac_div_system
+	+define+GATE_SIM
+	-l sim/gate/xrun_divider_gate.log
+	-v /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	netlist/fractional_n_divider_postsyn.v
+	rtl/t_flip_flop.v
+	rtl/frac_div_system.v
+	tb/tb_frac_div_system.v
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: netlist/fractional_n_divider_postsyn.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: tb/tb_frac_div_system.v
+	module worklib.tb_frac_div_system:v
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFNRX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_frac_div_system
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "netlist/fractional_n_divider_postsyn.sdf"
+	Compiled SDF file "fractional_n_divider_postsyn.sdf.X" older than source SDF file "netlist/fractional_n_divider_postsyn.sdf".
+	Recompiling.
+	Writing compiled SDF file to "fractional_n_divider_postsyn.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     fractional_n_divider_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_frac_div_system.dut.u_div
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (53)) of instance tb_frac_div_system.dut.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 30>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (negedge CKN) (80)) of instance tb_frac_div_system.dut.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 31>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (102)) of instance tb_frac_div_system.dut.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 81>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_frac_div_system.dut.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 136>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_frac_div_system.dut.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 137>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (posedge CK) (95)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 162>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge SN) (posedge CK) (59)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 163>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (114)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 197>.
+	Annotation completed with 0 Errors and 12 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 40      	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (40/40) 
+		 No. of Tchecks    = 52      	 No. of Disabled Tchecks    = 0        Annotated = 88.46% (46/52) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	            40	             0	                40	                100.00
+		      $width	            18	             0	                18	                100.00
+		  $setuphold	            34	             0	                28	                 82.35
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.tb_frac_div_system:v <0x0434125e>
+			streams:  20, words: 47161
+		tsmc18.SDFFRHQX1:v <0x5796f4e7>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x4aa9e2a0>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x607f18cd>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQXL:v <0x0734d243>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x0b53d452>
+			streams:   0, words:     0
+		tsmc18.SDFFNRX1:v <0x3e7ee524>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                20      17
+		UDPs:                   10       2
+		Primitives:             58       6
+		Timing outputs:         17      11
+		Registers:              40      40
+		Scalar wires:           47       -
+		Expanded wires:          2       1
+		Always blocks:           5       5
+		Initial blocks:          6       6
+		Parallel blocks:         1       1
+		Pseudo assignments:      3       3
+		Timing checks:          86      28
+		Interconnect:           45       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_frac_div_system:v
+Loading snapshot worklib.tb_frac_div_system:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 Divider + T-FF testbench: GATE + MAXIMUM SDF
+============================================================
+
+[Test 1] Asynchronous reset
+ -> PASS: INT65K_CLK and CLK32K remain low during reset
+
+[Test 2] N=2 nominal mode
+ -> PASS: INT65K_CLK N=2 period measured=15258.78 ns expected=15258.78 ns
+ -> PASS: INT65K_CLK N=2 frequency is approximately 65.536 kHz
+ -> PASS: N=2 duty cycle is approximately 50 percent
+
+[Test 3] N=1 bypass mode
+ -> PASS: INT65K_CLK N=1 period measured=7629.35 ns expected=7629.39 ns
+
+[Test 4] N=3 asymmetric mode
+ -> PASS: INT65K_CLK N=3 period measured=22888.17 ns expected=22888.17 ns
+ -> PASS: N=3 waveform is 1*T_RO high and 2*T_RO low
+
+[Test 5] Dynamic N=2 to N=3 transition
+ -> PASS: first settled N=3 period after transition measured=22888.17 ns expected=22888.17 ns
+
+[Test 5-B] Dynamic N=2 to N=1 transition
+ -> PASS: first settled N=1 period after transition measured=7629.35 ns expected=7629.39 ns
+
+[Test 6] Invalid N_sel=2'b11 safe fallback
+ -> PASS: invalid code behaves as N=2 measured=15258.78 ns expected=15258.78 ns
+
+[Test 7] Long-term average for command average N=2.1
+ -> theoretical=62.415238 kHz measured=62.445011 kHz error=0.047701%
+ -> PASS: average-frequency error is below 0.1 percent
+
+[Test 8] External T-FF output at nominal N=2
+ -> PASS: CLK32K nominal period measured=30517.56 ns expected=30517.56 ns
+ -> PASS: CLK32K duty cycle is approximately 50 percent
+
+============================================================
+RESULT: PASS=13 FAIL=0
+ALL WEEK-4 DIRECTED TESTS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 16635885346 PS + 2
+./tb/tb_frac_div_system.v:360         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:04:31 +0330  (total: 00:00:01)

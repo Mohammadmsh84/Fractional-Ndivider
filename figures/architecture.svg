@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title description">
+  <title id="title">Fractional-N clock-divider architecture</title>
+  <desc id="description">The input clock drives the programmable divider. Its INT65K_CLK output clocks the external T flip-flop and the Group 4 sigma-delta modulator. The modulator returns N_sel to the divider. Frequencies are nominal for divide-by-2 operation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#334155"/></marker>
+    <marker id="control-arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 Z" fill="#0f766e"/></marker>
+  </defs>
+  <rect width="1120" height="430" rx="20" fill="#f8fafc"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="38" y="43" font-size="22" font-weight="700" fill="#0f172a">Fractional-N clock generation</text>
+    <text x="38" y="69" font-size="14" fill="#64748b">Nominal frequencies at N = 2; divide commands are applied at complete-period boundaries.</text>
+    <rect x="36" y="118" width="176" height="90" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="124" y="150" text-anchor="middle" font-size="17" font-weight="700" fill="#0f172a">Input clock</text>
+    <text x="124" y="178" text-anchor="middle" font-size="17" fill="#475569">131.072 kHz</text>
+    <rect x="280" y="118" width="222" height="90" rx="12" fill="#dbeafe" stroke="#60a5fa" stroke-width="2"/>
+    <text x="391" y="149" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">Programmable divider</text>
+    <text x="391" y="178" text-anchor="middle" font-size="17" fill="#1e40af">N = 1, 2, or 3</text>
+    <rect x="699" y="118" width="179" height="90" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="788" y="149" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">External T-FF</text>
+    <text x="788" y="178" text-anchor="middle" font-size="17" fill="#475569">Divide by 2</text>
+    <rect x="947" y="118" width="143" height="90" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="1018" y="149" text-anchor="middle" font-size="18" font-weight="700" fill="#0f172a">CLK32K</text>
+    <text x="1018" y="178" text-anchor="middle" font-size="17" fill="#475569">32.768 kHz</text>
+    <path d="M212 163 H276" fill="none" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <path d="M502 163 H695" fill="none" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <text x="599" y="133" text-anchor="middle" font-size="16" font-weight="700" fill="#334155">INT65K_CLK</text>
+    <text x="599" y="192" text-anchor="middle" font-size="15" fill="#64748b">65.536 kHz</text>
+    <path d="M878 163 H943" fill="none" stroke="#334155" stroke-width="2.4" marker-end="url(#arrow)"/>
+    <rect x="430" y="290" width="310" height="90" rx="12" fill="#ccfbf1" stroke="#5eead4" stroke-width="2"/>
+    <text x="585" y="322" text-anchor="middle" font-size="18" font-weight="700" fill="#115e59">Group 4 MASH 1-1 SDM</text>
+    <text x="585" y="350" text-anchor="middle" font-size="16" fill="#0f766e">epsilon_RO (Q1.23), dither_en</text>
+    <circle cx="650" cy="163" r="4.5" fill="#334155"/>
+    <path d="M650 163 V286" fill="none" stroke="#334155" stroke-width="2.2" marker-end="url(#arrow)"/>
+    <rect x="658" y="236" width="78" height="22" rx="4" fill="#f8fafc"/>
+    <text x="665" y="252" font-size="14" fill="#475569">SDM clock</text>
+    <path d="M430 335 H391 V212" fill="none" stroke="#0f766e" stroke-width="2.4" marker-end="url(#control-arrow)"/>
+    <text x="377" y="270" text-anchor="end" font-size="16" font-weight="700" fill="#0f766e">N_sel[1:0]</text>
+    <text x="38" y="408" font-size="13" fill="#64748b">The SDM selects the divide sequence; the input-clock source is external to this RTL package.</text>
+  </g>
+</svg>

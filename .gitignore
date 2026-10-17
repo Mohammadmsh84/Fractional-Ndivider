@@ -1,0 +1,62 @@
+# Simulator-generated working databases
+xcelium.d/
+INCA_libs/
+.simvision/
+waves.shm/
+*.shm/
+*.dsn
+*.trn
+*.vcd
+*.vpd
+*.fsdb
+*.wlf
+*.key
+*.history
+*.diag
+*.sdf.X
+*.sdf.log
+xrun.log
+xrun_*.log
+xmvlog.log
+xmelab.log
+xmsim.log
+genus.log*
+genus.cmd*
+genus.lock
+
+# Keep the supplied evidence logs, even when their basenames match above.
+!/sim/rtl/*.log
+!/sim/gate/*.log
+!/coverage/*.log
+!/sim/week4_signoff_summary.log
+
+# Coverage databases; retain the small archived text logs in coverage/.
+cov_work/
+cov_work.*
+*.ucd
+*.ucm
+*.vdb/
+
+# Local builds and exported tool sessions
+build/
+work/
+*.jou
+*.pb
+
+# Editor and operating-system files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+
+# Local technology paths and credentials
+.env
+.env.*
+!.env.example
+
+# Intentionally keep: RTL, TBs, SDC, netlists, SDF, reports, and evidence logs.

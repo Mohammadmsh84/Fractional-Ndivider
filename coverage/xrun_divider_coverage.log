@@ -1,0 +1,128 @@
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:04:04 +0330
+xrun
+	-clean
+	-sv
+	-access +rwc
+	-timescale 1ns/1ps
+	-coverage all
+	-covoverwrite
+	-covtest divider_rtl
+	-top tb_frac_div_system
+	-l sim/rtl/xrun_divider_coverage.log
+	rtl/fractional_n_divider.v
+	rtl/t_flip_flop.v
+	rtl/frac_div_system.v
+	tb/tb_frac_div_system.v
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: rtl/fractional_n_divider.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: tb/tb_frac_div_system.v
+	module worklib.tb_frac_div_system:v
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_frac_div_system
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.fractional_n_divider
+			FSM extracted for state register counter
+		worklib.t_flip_flop
+		worklib.frac_div_system
+		worklib.tb_frac_div_system
+	Total FSMs extracted = 1
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x178c22fe>
+			streams:   2, words:   574
+		worklib.fractional_n_divider:v <0x6fd4e7d9>
+			streams:   9, words:  5488
+		worklib.tb_frac_div_system:v <0x7d349963>
+			streams:  20, words: 53567
+    integer pass_cnt;
+                   |
+xmelab: *W,COVUTA (./tb/tb_frac_div_system.v,34|19): Toggle coverage is not supported for SystemVerilog integer, real, string, dynamic array, sparse memory and reference ports. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 4       4
+		Registers:              39      39
+		Scalar wires:            4       -
+		Vectored wires:          2       -
+		Always blocks:           8       8
+		Initial blocks:          6       6
+		Parallel blocks:         1       1
+		Cont. assignments:       2       2
+		Pseudo assignments:      3       3
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_frac_div_system:v
+Loading snapshot worklib.tb_frac_div_system:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 Divider + T-FF testbench: RTL
+============================================================
+
+[Test 1] Asynchronous reset
+ -> PASS: INT65K_CLK and CLK32K remain low during reset
+
+[Test 2] N=2 nominal mode
+ -> PASS: INT65K_CLK N=2 period measured=15258.78 ns expected=15258.78 ns
+ -> PASS: INT65K_CLK N=2 frequency is approximately 65.536 kHz
+ -> PASS: N=2 duty cycle is approximately 50 percent
+
+[Test 3] N=1 bypass mode
+ -> PASS: INT65K_CLK N=1 period measured=7629.39 ns expected=7629.39 ns
+
+[Test 4] N=3 asymmetric mode
+ -> PASS: INT65K_CLK N=3 period measured=22888.17 ns expected=22888.17 ns
+ -> PASS: N=3 waveform is 1*T_RO high and 2*T_RO low
+
+[Test 5] Dynamic N=2 to N=3 transition
+ -> PASS: first settled N=3 period after transition measured=22888.17 ns expected=22888.17 ns
+
+[Test 5-B] Dynamic N=2 to N=1 transition
+ -> PASS: first settled N=1 period after transition measured=7629.39 ns expected=7629.39 ns
+
+[Test 6] Invalid N_sel=2'b11 safe fallback
+ -> PASS: invalid code behaves as N=2 measured=15258.78 ns expected=15258.78 ns
+
+[Test 7] Long-term average for command average N=2.1
+ -> theoretical=62.415238 kHz measured=62.445011 kHz error=0.047701%
+ -> PASS: average-frequency error is below 0.1 percent
+
+[Test 8] External T-FF output at nominal N=2
+ -> PASS: CLK32K nominal period measured=30517.56 ns expected=30517.56 ns
+ -> PASS: CLK32K duty cycle is approximately 50 percent
+
+============================================================
+RESULT: PASS=13 FAIL=0
+ALL WEEK-4 DIRECTED TESTS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 16635884895 PS + 5
+./tb/tb_frac_div_system.v:360         $finish;
+xcelium> exit
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_frac_div_system(tb_frac_div_system)
+  scope    :  scope
+  testname :  divider_rtl
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1543ed22_00000000.ucm
+  data               :  ./cov_work/scope/divider_rtl/icc_1543ed22_00000000.ucd
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:04:06 +0330  (total: 00:00:02)

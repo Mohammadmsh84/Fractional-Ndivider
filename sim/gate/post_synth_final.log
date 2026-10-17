@@ -1,0 +1,1279 @@
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:02:44 +0330
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: netlist/fractional_n_divider_postsyn.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: tb/tb_frac_div_system.v
+	module worklib.tb_frac_div_system:v
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFNRX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_frac_div_system
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "netlist/fractional_n_divider_postsyn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     fractional_n_divider_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_frac_div_system.dut.u_div
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (53)) of instance tb_frac_div_system.dut.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 30>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (negedge CKN) (80)) of instance tb_frac_div_system.dut.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 31>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (102)) of instance tb_frac_div_system.dut.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 81>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_frac_div_system.dut.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 136>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_frac_div_system.dut.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 137>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (posedge CK) (95)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 162>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge SN) (posedge CK) (59)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 163>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (114)) of instance tb_frac_div_system.dut.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 197>.
+	Annotation completed with 0 Errors and 12 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 40      	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (40/40) 
+		 No. of Tchecks    = 52      	 No. of Disabled Tchecks    = 0        Annotated = 88.46% (46/52) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	            40	             0	                40	                100.00
+		      $width	            18	             0	                18	                100.00
+		  $setuphold	            34	             0	                28	                 82.35
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.tb_frac_div_system:v <0x0434125e>
+			streams:  20, words: 47161
+		tsmc18.SDFFRHQX1:v <0x5796f4e7>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x4aa9e2a0>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x607f18cd>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQXL:v <0x0734d243>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x0b53d452>
+			streams:   0, words:     0
+		tsmc18.SDFFNRX1:v <0x3e7ee524>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                20      17
+		UDPs:                   10       2
+		Primitives:             58       6
+		Timing outputs:         17      11
+		Registers:              40      40
+		Scalar wires:           47       -
+		Expanded wires:          2       1
+		Always blocks:           5       5
+		Initial blocks:          6       6
+		Parallel blocks:         1       1
+		Pseudo assignments:      3       3
+		Timing checks:          86      28
+		Interconnect:           45       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_frac_div_system:v
+Loading snapshot worklib.tb_frac_div_system:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 Divider + T-FF testbench: GATE + MAXIMUM SDF
+============================================================
+
+[Test 1] Asynchronous reset
+ -> PASS: INT65K_CLK and CLK32K remain low during reset
+
+[Test 2] N=2 nominal mode
+ -> PASS: INT65K_CLK N=2 period measured=15258.78 ns expected=15258.78 ns
+ -> PASS: INT65K_CLK N=2 frequency is approximately 65.536 kHz
+ -> PASS: N=2 duty cycle is approximately 50 percent
+
+[Test 3] N=1 bypass mode
+ -> PASS: INT65K_CLK N=1 period measured=7629.35 ns expected=7629.39 ns
+
+[Test 4] N=3 asymmetric mode
+ -> PASS: INT65K_CLK N=3 period measured=22888.17 ns expected=22888.17 ns
+ -> PASS: N=3 waveform is 1*T_RO high and 2*T_RO low
+
+[Test 5] Dynamic N=2 to N=3 transition
+ -> PASS: first settled N=3 period after transition measured=22888.17 ns expected=22888.17 ns
+
+[Test 5-B] Dynamic N=2 to N=1 transition
+ -> PASS: first settled N=1 period after transition measured=7629.35 ns expected=7629.39 ns
+
+[Test 6] Invalid N_sel=2'b11 safe fallback
+ -> PASS: invalid code behaves as N=2 measured=15258.78 ns expected=15258.78 ns
+
+[Test 7] Long-term average for command average N=2.1
+ -> theoretical=62.415238 kHz measured=62.445011 kHz error=0.047701%
+ -> PASS: average-frequency error is below 0.1 percent
+
+[Test 8] External T-FF output at nominal N=2
+ -> PASS: CLK32K nominal period measured=30517.56 ns expected=30517.56 ns
+ -> PASS: CLK32K duty cycle is approximately 50 percent
+
+============================================================
+RESULT: PASS=13 FAIL=0
+ALL WEEK-4 DIRECTED TESTS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 16635885346 PS + 2
+./tb/tb_frac_div_system.v:360         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:02:45 +0330  (total: 00:00:01)
+PASS: divider gate/SDF regression
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:02:45 +0330
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.v
+	module worklib.sdm_mash11:v
+		errors: 0, warnings: 0
+file: rtl/fractional_n_divider.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_g4_top.sv
+	module worklib.frac_div_g4_top:sv
+		errors: 0, warnings: 0
+file: tb/tb_system_g4.sv
+	module worklib.tb_system_g4:sv
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.ADDFX1:v
+		errors: 0, warnings: 0
+	module tsmc18.ADDFX2:v
+		errors: 0, warnings: 0
+	module tsmc18.ADDHXL:v
+		errors: 0, warnings: 0
+	module tsmc18.AND2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.AND3X2:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI21X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI22X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI2BB1X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI2BB1XL:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI31XL:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI32X1:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFSXL:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.MXI2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2BXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR3XL:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR4X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR4BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI211X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI21XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI222XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB1X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OR2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.OR4X2:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XNOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_system_g4
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     sdm_mash11_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_system_g4.dut.u_sdm
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (0) (134)) of instance tb_system_g4.dut.u_sdm.\N_sel_reg[0]  of module DFFSXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 348>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\N_sel_reg[1]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 369>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\q2_delay_reg[1]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 595>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\q2_delay_reg[0]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 616>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[0]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 839>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[24]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 864>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[23]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 917>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[2]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 940>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[5]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 967>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[7]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 994>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[1]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1021>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[6]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1048>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[3]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1075>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[4]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1102>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[24]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1189>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[2]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1210>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[3]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1231>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[4]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1252>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[5]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1273>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[6]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1294>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[7]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1315>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[8]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1336>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[9]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1357>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[10]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1378>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[11]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1399>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[12]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1420>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[13]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1441>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[14]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1462>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[16]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1483>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[17]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1504>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[18]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1525>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[19]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1546>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[20]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1567>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[21]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1588>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[22]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1609>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[15]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1630>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[1]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1651>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[1]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1672>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[23]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1693>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[2]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1714>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[3]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1735>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[4]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1756>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[5]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1777>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[6]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1798>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[7]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1819>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[8]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1840>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[9]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1861>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[10]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1882>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[11]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1903>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[12]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1924>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[13]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1945>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[14]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1966>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[15]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1987>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[16]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2008>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[17]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2029>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[18]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2050>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[19]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2071>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[20]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2092>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[21]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[22]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2134>.
+	Annotation completed with 0 Errors and 60 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 1428    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (1428/1428) 
+		 No. of Tchecks    = 392     	 No. of Disabled Tchecks    = 0        Annotated = 84.69% (332/392) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	          1428	             0	              1428	                100.00
+		      $width	           180	             0	               180	                100.00
+		  $setuphold	           212	             0	               152	                 71.70
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.tb_system_g4:sv <0x4605e6e1>
+			streams:  22, words: 49313
+		worklib.fractional_n_divider:v <0x3967e4ef>
+			streams:   9, words:  3834
+		tsmc18.ADDFX1:v <0x1c10b618>
+			streams:   0, words:     0
+		tsmc18.MXI2X1:v <0x4d3494e1>
+			streams:   0, words:     0
+		tsmc18.ADDFX2:v <0x7e0cbc0f>
+			streams:   0, words:     0
+		tsmc18.XNOR2X1:v <0x63f5a6e5>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x2da862bc>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x62c11b06>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x6d3efc95>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQX1:v <0x7ffe0d41>
+			streams:   0, words:     0
+		tsmc18.DFFRHQXL:v <0x116e1549>
+			streams:   0, words:     0
+		tsmc18.ADDFX1:v <0x0bf33873>
+			streams:   0, words:     0
+		tsmc18.DFFRHQXL:v <0x7413a8f7>
+			streams:   0, words:     0
+		tsmc18.DFFSXL:v <0x2e630b7d>
+			streams:   0, words:     0
+		tsmc18.ADDHXL:v <0x311824f7>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:               252      48
+		UDPs:                   69       3
+		Primitives:            804       8
+		Timing outputs:        314      23
+		Registers:             116      62
+		Scalar wires:          574       -
+		Expanded wires:         24       1
+		Vectored wires:          1       -
+		Always blocks:          11      11
+		Initial blocks:          8       8
+		Cont. assignments:       2       2
+		Pseudo assignments:      4       4
+		Timing checks:         604     140
+		Interconnect:          695       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_system_g4:sv
+Loading snapshot worklib.tb_system_g4:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 integration: G4 POST-SYN SDM + RTL divider + T-FF
+============================================================
+
+------------------------------------------------------------
+CASE: Zero  epsilon=0x000000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25  epsilon=0x200000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25  epsilon=0xe00000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Plus_50ppm  epsilon=0x0001a3  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Minus_50ppm  epsilon=0xfffe5d  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Zero_Dither  epsilon=0x000000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25_Dither  epsilon=0x200000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25_Dither  epsilon=0xe00000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_50ppm_Dither  epsilon=0x0001a3  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_50ppm_Dither  epsilon=0xfffe5d  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+ -> PASS: active divider ratio changed only at complete-period boundaries
+ -> PASS: no invalid command was observed in any integration case
+
+============================================================
+G4 INTEGRATION RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 856708017795 PS + 6
+./tb/tb_system_g4.sv:534         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:02:55 +0330  (total: 00:00:10)
+PASS: G4 post-synthesis SDM integration
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:02:55 +0330
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	module worklib.sdm_mash11:sv
+		errors: 0, warnings: 0
+file: netlist/fractional_n_divider_postsyn.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_g4_top.sv
+	module worklib.frac_div_g4_top:sv
+		errors: 0, warnings: 0
+file: tb/tb_system_g4.sv
+	module worklib.tb_system_g4:sv
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFNRX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_system_g4
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "netlist/fractional_n_divider_postsyn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     fractional_n_divider_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_system_g4.dut.u_div_system.u_div
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (53)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 30>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (negedge CKN) (80)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 31>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (102)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 81>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 136>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 137>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (posedge CK) (95)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 162>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge SN) (posedge CK) (59)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 163>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (114)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 197>.
+	Annotation completed with 0 Errors and 12 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 40      	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (40/40) 
+		 No. of Tchecks    = 52      	 No. of Disabled Tchecks    = 0        Annotated = 88.46% (46/52) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	            40	             0	                40	                100.00
+		      $width	            18	             0	                18	                100.00
+		  $setuphold	            34	             0	                28	                 82.35
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.sdm_mash11:sv <0x50b13fc3>
+			streams:  12, words:  6148
+		worklib.tb_system_g4:sv <0x2b2d0127>
+			streams:  18, words: 46517
+		tsmc18.SDFFRHQX1:v <0x5796f4e7>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x4aa9e2a0>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x607f18cd>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQXL:v <0x0734d243>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x0b53d452>
+			streams:   0, words:     0
+		tsmc18.SDFFNRX1:v <0x3e7ee524>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                22      19
+		UDPs:                   10       2
+		Primitives:             58       6
+		Timing outputs:         17      11
+		Registers:              73      73
+		Scalar wires:           49       -
+		Expanded wires:          2       1
+		Vectored wires:          4       -
+		Always blocks:           9       9
+		Initial blocks:          7       7
+		Cont. assignments:       4       4
+		Pseudo assignments:      4       4
+		Timing checks:          86      28
+		Interconnect:           45       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_system_g4:sv
+Loading snapshot worklib.tb_system_g4:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 integration: G4 RTL SDM + POST-SYN divider + T-FF
+============================================================
+
+------------------------------------------------------------
+CASE: Zero  epsilon=0x000000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25  epsilon=0x200000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25  epsilon=0xe00000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Plus_50ppm  epsilon=0x0001a3  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Minus_50ppm  epsilon=0xfffe5d  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Zero_Dither  epsilon=0x000000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25_Dither  epsilon=0x200000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25_Dither  epsilon=0xe00000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_50ppm_Dither  epsilon=0x0001a3  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_50ppm_Dither  epsilon=0xfffe5d  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+ -> PASS: gate-level period behavior passed without runt pulses
+ -> PASS: no invalid command was observed in any integration case
+
+============================================================
+G4 INTEGRATION RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 856708018207 PS + 2
+./tb/tb_system_g4.sv:534         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:02:58 +0330  (total: 00:00:03)
+PASS: G4 RTL + Divider post-synthesis integration
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:02:58 +0330
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.v
+	module worklib.sdm_mash11:v
+		errors: 0, warnings: 0
+file: netlist/fractional_n_divider_postsyn.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_g4_top.sv
+	module worklib.frac_div_g4_top:sv
+		errors: 0, warnings: 0
+file: tb/tb_system_g4.sv
+	module worklib.tb_system_g4:sv
+		errors: 0, warnings: 0
+file: /home/cad/TECH.D/TSMC180/Verilog/tsmc18.v
+	module tsmc18.ADDFX1:v
+		errors: 0, warnings: 0
+	module tsmc18.ADDFX2:v
+		errors: 0, warnings: 0
+	module tsmc18.ADDHXL:v
+		errors: 0, warnings: 0
+	module tsmc18.AND2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AND2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.AND3X2:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI21X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI22X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI2BB1X1:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI2BB1XL:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI31XL:v
+		errors: 0, warnings: 0
+	module tsmc18.AOI32X1:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.DFFSXL:v
+		errors: 0, warnings: 0
+	module tsmc18.INVX1:v
+		errors: 0, warnings: 0
+	module tsmc18.INVXL:v
+		errors: 0, warnings: 0
+	module tsmc18.MXI2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND2BXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NAND3BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR2BXL:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR3X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR3XL:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR4X1:v
+		errors: 0, warnings: 0
+	module tsmc18.NOR4BX1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI211X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI21XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI222XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB1X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.OAI2BB2XL:v
+		errors: 0, warnings: 0
+	module tsmc18.OR2X2:v
+		errors: 0, warnings: 0
+	module tsmc18.OR4X2:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFNRX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFRHQXL:v
+		errors: 0, warnings: 0
+	module tsmc18.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module tsmc18.XNOR2X1:v
+		errors: 0, warnings: 0
+	module tsmc18.XOR2X1:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_mux2:v
+		errors: 0, warnings: 0
+	primitive tsmc18.udp_dff:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+		Caching library 'tsmc18' ....... Done
+	Top level design units:
+		tb_system_g4
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Reading SDF file from location "external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf"
+	Reading SDF file from location "netlist/fractional_n_divider_postsyn.sdf"
+	Annotating SDF timing data:
+		Compiled SDF file:     sdm_mash11_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_system_g4.dut.u_sdm
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (0) (134)) of instance tb_system_g4.dut.u_sdm.\N_sel_reg[0]  of module DFFSXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 348>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\N_sel_reg[1]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 369>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\q2_delay_reg[1]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 595>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (102) (0)) of instance tb_system_g4.dut.u_sdm.\q2_delay_reg[0]  of module DFFRHQXL <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 616>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[0]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 839>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[24]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 864>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[23]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 917>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[2]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 940>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[5]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 967>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (114) (0)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[7]  of module SDFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 994>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[1]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1021>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[6]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1048>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[3]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1075>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (posedge CK) (59) (95)) of instance tb_system_g4.dut.u_sdm.\lfsr_reg[4]  of module SDFFSHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1102>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[24]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1189>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[2]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1210>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[3]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1231>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[4]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1252>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[5]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1273>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[6]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1294>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[7]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1315>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[8]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1336>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[9]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1357>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[10]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1378>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[11]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1399>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[12]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1420>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[13]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1441>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[14]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1462>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[16]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1483>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[17]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1504>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[18]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1525>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[19]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1546>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[20]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1567>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[21]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1588>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[22]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1609>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[15]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1630>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc2_reg[1]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1651>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[1]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1672>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[23]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1693>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[2]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1714>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[3]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1735>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[4]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1756>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[5]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1777>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[6]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1798>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[7]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1819>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[8]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1840>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[9]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1861>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[10]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1882>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[11]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1903>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[12]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1924>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[13]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1945>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[14]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1966>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[15]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 1987>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[16]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2008>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[17]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2029>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[18]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2050>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[19]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2071>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[20]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2092>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[21]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (117) (0)) of instance tb_system_g4.dut.u_sdm.\acc1_reg[22]  of module DFFRHQX1 <./external/g4_sdm/synthesis/synout/sdm_mash11_postsyn.sdf, line 2134>.
+	Annotating SDF timing data:
+		Compiled SDF file:     fractional_n_divider_postsyn.sdf.X
+		Log file:              
+		Backannotation scope:  tb_system_g4.dut.u_div_system.u_div
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (53)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 30>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (negedge CKN) (80)) of instance tb_system_g4.dut.u_div_system.u_div.q_neg_reg of module SDFFNRX1 <./netlist/fractional_n_divider_postsyn.sdf, line 31>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (102)) of instance tb_system_g4.dut.u_div_system.u_div.q_pos_reg of module SDFFRHQXL <./netlist/fractional_n_divider_postsyn.sdf, line 81>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 112>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[1]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 136>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (117)) of instance tb_system_g4.dut.u_div_system.u_div.\counter_reg[0]  of module DFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 137>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (posedge CK) (95)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 162>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge SN) (posedge CK) (59)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[1]  of module SDFFSHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 163>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECOVERY (posedge RN) (posedge CK) (114)) of instance tb_system_g4.dut.u_div_system.u_div.\N_sel_current_reg[0]  of module SDFFRHQX1 <./netlist/fractional_n_divider_postsyn.sdf, line 197>.
+	Annotation completed with 0 Errors and 72 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 1468    	 No. of Disabled Pathdelays = 0        Annotated = 100.00% (1468/1468) 
+		 No. of Tchecks    = 444     	 No. of Disabled Tchecks    = 0        Annotated = 85.14% (378/444) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	          1468	             0	              1468	                100.00
+		      $width	           198	             0	               198	                100.00
+		  $setuphold	           246	             0	               180	                 73.17
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x05724e59>
+			streams:   2, words:   379
+		worklib.tb_system_g4:sv <0x5623fcd0>
+			streams:  19, words: 46775
+		tsmc18.SDFFRHQX1:v <0x48d602c2>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x55e91485>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x607f18cd>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQXL:v <0x0734d243>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x3270bc9f>
+			streams:   0, words:     0
+		tsmc18.SDFFNRX1:v <0x3e7ee524>
+			streams:   0, words:     0
+		tsmc18.ADDFX1:v <0x1c10b618>
+			streams:   0, words:     0
+		tsmc18.MXI2X1:v <0x4d3494e1>
+			streams:   0, words:     0
+		tsmc18.ADDFX2:v <0x7e0cbc0f>
+			streams:   0, words:     0
+		tsmc18.XNOR2X1:v <0x63f5a6e5>
+			streams:   0, words:     0
+		tsmc18.XOR2X1:v <0x2da862bc>
+			streams:   0, words:     0
+		tsmc18.SDFFSHQX1:v <0x62c11b06>
+			streams:   0, words:     0
+		tsmc18.DFFRHQX1:v <0x6d3efc95>
+			streams:   0, words:     0
+		tsmc18.SDFFRHQX1:v <0x7ffe0d41>
+			streams:   0, words:     0
+		tsmc18.DFFRHQXL:v <0x116e1549>
+			streams:   0, words:     0
+		tsmc18.ADDFX1:v <0x0bf33873>
+			streams:   0, words:     0
+		tsmc18.DFFRHQXL:v <0x7413a8f7>
+			streams:   0, words:     0
+		tsmc18.DFFSXL:v <0x2e630b7d>
+			streams:   0, words:     0
+		tsmc18.ADDHXL:v <0x311824f7>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:               268      51
+		UDPs:                   79       3
+		Primitives:            862       8
+		Timing outputs:        331      26
+		Registers:             117      59
+		Scalar wires:          617       -
+		Expanded wires:         24       1
+		Always blocks:           5       5
+		Initial blocks:          8       8
+		Pseudo assignments:      4       4
+		Timing checks:         690     167
+		Interconnect:          740       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_system_g4:sv
+Loading snapshot worklib.tb_system_g4:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 integration: BOTH POST-SYN + MAXIMUM SDF
+============================================================
+
+------------------------------------------------------------
+CASE: Zero  epsilon=0x000000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25  epsilon=0x200000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25  epsilon=0xe00000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Plus_50ppm  epsilon=0x0001a3  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Minus_50ppm  epsilon=0xfffe5d  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Zero_Dither  epsilon=0x000000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25_Dither  epsilon=0x200000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25_Dither  epsilon=0xe00000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_50ppm_Dither  epsilon=0x0001a3  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_50ppm_Dither  epsilon=0xfffe5d  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+ -> PASS: gate-level period behavior passed without runt pulses
+ -> PASS: no invalid command was observed in any integration case
+
+============================================================
+G4 INTEGRATION RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 856708018207 PS + 3
+./tb/tb_system_g4.sv:534         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:03:08 +0330  (total: 00:00:10)
+PASS: both-post-synthesis integration
+All post-synthesis Week-4 regressions passed.

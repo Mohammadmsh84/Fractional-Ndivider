@@ -1,0 +1,106 @@
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:03:58 +0330
+xrun
+	-clean
+	-sv
+	-access +rwc
+	-timescale 1ns/1ps
+	-top tb_sdm_mash11_week3
+	+define+FAST_SIM
+	-l sim/rtl/g4_standalone_fast.log
+	external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	external/g4_sdm/rtl_sources/tb_sdm_mash11_week3.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	module worklib.sdm_mash11:sv
+		errors: 0, warnings: 0
+file: external/g4_sdm/rtl_sources/tb_sdm_mash11_week3.sv
+	module worklib.tb_sdm_mash11_week3:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_sdm_mash11_week3
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.sdm_mash11:sv <0x372b7b2c>
+			streams:  12, words:  6064
+		worklib.tb_sdm_mash11_week3:sv <0x7d950983>
+			streams:  22, words: 31792
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:              47      47
+		Scalar wires:            4       -
+		Vectored wires:          6       -
+		Always blocks:           6       6
+		Initial blocks:          8       8
+		Cont. assignments:       4       4
+		Pseudo assignments:      5       5
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_sdm_mash11_week3:sv
+Loading snapshot worklib.tb_sdm_mash11_week3:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+[W3] RTL baseline mode
+============================================================
+ WEEK-3 SDM CHECK | cycles/test=100000 | sample delay=20.0 ns
+============================================================
+[PASS] Reset behavior
+[W3_RESULT] name=Reset dither=0 avg=2.000000 exp=2.000000 err=0.000000 verdict=PASS
+[PASS] Boundary_-max             dither=0 avg=1.000000 exp=1.000000 err=+0.000000
+[W3_RESULT] name=Boundary_-max dither=0 avg=1.000000000 exp=1.000000000 err=+0.000000000 verdict=PASS
+[PASS] Zero                      dither=0 avg=2.000000 exp=2.000000 err=+0.000000
+[W3_RESULT] name=Zero dither=0 avg=2.000000000 exp=2.000000000 err=+0.000000000 verdict=PASS
+[PASS] DRS_+50ppm_0x68           dither=0 avg=2.000030 exp=2.000025 err=+0.000005
+[W3_RESULT] name=DRS_+50ppm_0x68 dither=0 avg=2.000030000 exp=2.000024796 err=+0.000005204 verdict=PASS
+[PASS] DRS_-50ppm_0xFF98         dither=0 avg=1.999970 exp=1.999975 err=-0.000005
+[W3_RESULT] name=DRS_-50ppm_0xFF98 dither=0 avg=1.999970000 exp=1.999975204 err=-0.000005204 verdict=PASS
+[PASS] DRS_+100ppm_0xD0          dither=0 avg=2.000050 exp=2.000050 err=+0.000000
+[W3_RESULT] name=DRS_+100ppm_0xD0 dither=0 avg=2.000050000 exp=2.000049591 err=+0.000000409 verdict=PASS
+[PASS] Exact_+50ppm_Q1.23        dither=0 avg=2.000100 exp=2.000100 err=+0.000000
+[W3_RESULT] name=Exact_+50ppm_Q1.23 dither=0 avg=2.000100000 exp=2.000099897 err=+0.000000103 verdict=PASS
+[PASS] Exact_-50ppm_Q1.23        dither=0 avg=1.999900 exp=1.999900 err=-0.000000
+[W3_RESULT] name=Exact_-50ppm_Q1.23 dither=0 avg=1.999900000 exp=1.999900103 err=-0.000000103 verdict=PASS
+[PASS] Plus_0.25                 dither=0 avg=2.500000 exp=2.500000 err=+0.000000
+[W3_RESULT] name=Plus_0.25 dither=0 avg=2.500000000 exp=2.500000000 err=+0.000000000 verdict=PASS
+[PASS] Minus_0.25                dither=0 avg=1.500000 exp=1.500000 err=+0.000000
+[W3_RESULT] name=Minus_0.25 dither=0 avg=1.500000000 exp=1.500000000 err=+0.000000000 verdict=PASS
+[PASS] Plus_0.5                  dither=0 avg=3.000000 exp=3.000000 err=+0.000000
+[W3_RESULT] name=Plus_0.5 dither=0 avg=3.000000000 exp=3.000000000 err=+0.000000000 verdict=PASS
+[PASS] Boundary_+max             dither=0 avg=3.000000 exp=3.000000 err=+0.000000
+[W3_RESULT] name=Boundary_+max dither=0 avg=3.000000000 exp=3.000000000 err=+0.000000000 verdict=PASS
+[PASS] Zero                      dither=1 avg=2.000000 exp=2.000000 err=+0.000000
+[W3_RESULT] name=Zero dither=1 avg=2.000000000 exp=2.000000000 err=+0.000000000 verdict=PASS
+[PASS] DRS_+50ppm_0x68           dither=1 avg=2.000030 exp=2.000025 err=+0.000005
+[W3_RESULT] name=DRS_+50ppm_0x68 dither=1 avg=2.000030000 exp=2.000024796 err=+0.000005204 verdict=PASS
+[PASS] DRS_-50ppm_0xFF98         dither=1 avg=1.999970 exp=1.999975 err=-0.000005
+[W3_RESULT] name=DRS_-50ppm_0xFF98 dither=1 avg=1.999970000 exp=1.999975204 err=-0.000005204 verdict=PASS
+[PASS] DRS_+100ppm_0xD0          dither=1 avg=2.000050 exp=2.000050 err=+0.000000
+[W3_RESULT] name=DRS_+100ppm_0xD0 dither=1 avg=2.000050000 exp=2.000049591 err=+0.000000409 verdict=PASS
+[PASS] Exact_+50ppm_Q1.23        dither=1 avg=2.000100 exp=2.000100 err=+0.000000
+[W3_RESULT] name=Exact_+50ppm_Q1.23 dither=1 avg=2.000100000 exp=2.000099897 err=+0.000000103 verdict=PASS
+[PASS] Exact_-50ppm_Q1.23        dither=1 avg=1.999900 exp=1.999900 err=-0.000000
+[W3_RESULT] name=Exact_-50ppm_Q1.23 dither=1 avg=1.999900000 exp=1.999900103 err=-0.000000103 verdict=PASS
+[PASS] Plus_0.25                 dither=1 avg=2.500000 exp=2.500000 err=+0.000000
+[W3_RESULT] name=Plus_0.25 dither=1 avg=2.500000000 exp=2.500000000 err=+0.000000000 verdict=PASS
+[PASS] Minus_0.25                dither=1 avg=1.499990 exp=1.500000 err=-0.000010
+[W3_RESULT] name=Minus_0.25 dither=1 avg=1.499990000 exp=1.500000000 err=-0.000010000 verdict=PASS
+[KNOWN] Plus_0.5                 dither=1 avg=2.997000 exp=3.000000 err=-0.003000 (Week-2 boundary issue)
+[W3_RESULT] name=Plus_0.5 dither=1 avg=2.997000000 exp=3.000000000 err=-0.003000000 verdict=KNOWN
+[PASS] Boundary_+max             dither=1 avg=3.000000 exp=3.000000 err=+0.000000
+[W3_RESULT] name=Boundary_+max dither=1 avg=3.000000000 exp=3.000000000 err=+0.000000000 verdict=PASS
+[PASS] Invalid code 2'b11 was never observed
+[W3_RESULT] name=InvalidCode dither=0 avg=0.000000 exp=0.000000 err=0.000000 verdict=PASS
+============================================================
+ WEEK-3 RESULT: 22 PASS, 1 KNOWN, 0 FAIL
+============================================================
+WEEK3_SIM_PASS
+Simulation complete via $finish(1) at time 16022730685311 PS + 0
+./external/g4_sdm/rtl_sources/tb_sdm_mash11_week3.sv:252             $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:04:01 +0330  (total: 00:00:03)

@@ -1,0 +1,85 @@
+Week-4 integration: G4 POST-SYN SDM + RTL divider + T-FF
+CASE: Zero epsilon=0x000000 dither=0 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Zero gen_avg=2.000000000 app_avg=2.000000000 exp_avg=2.000000000 f_int=65.536038923 exp_f=65.536000000 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Plus_0.25 epsilon=0x200000 dither=0 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Plus_0.25 gen_avg=2.500000000 app_avg=2.500000000 exp_avg=2.500000000 f_int=52.428831139 exp_f=52.428800000 f32=26.214415569 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Minus_0.25 epsilon=0xe00000 dither=0 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Minus_0.25 gen_avg=1.500000000 app_avg=1.500000000 exp_avg=1.500000000 f_int=87.381385231 exp_f=87.381333333 f32=43.690692615 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Exact_Plus_50ppm epsilon=0x0001a3 dither=0 samples=10000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Exact_Plus_50ppm gen_avg=2.000100000 app_avg=2.000100000 exp_avg=2.000099897 f_int=65.532762285 exp_f=65.532726726 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Exact_Minus_50ppm epsilon=0xfffe5d dither=0 samples=10000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Exact_Minus_50ppm gen_avg=1.999900000 app_avg=1.999900000 exp_avg=1.999900103 f_int=65.539315889 exp_f=65.539273601 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Zero_Dither epsilon=0x000000 dither=1 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Zero_Dither gen_avg=2.000000000 app_avg=2.000000000 exp_avg=2.000000000 f_int=65.536038923 exp_f=65.536000000 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Plus_0.25_Dither epsilon=0x200000 dither=1 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Plus_0.25_Dither gen_avg=2.500000000 app_avg=2.500000000 exp_avg=2.500000000 f_int=52.428831139 exp_f=52.428800000 f32=26.214415569 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Minus_0.25_Dither epsilon=0xe00000 dither=1 samples=2000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Minus_0.25_Dither gen_avg=1.500000000 app_avg=1.500000000 exp_avg=1.500000000 f_int=87.381385231 exp_f=87.381333333 f32=43.690692615 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Plus_50ppm_Dither epsilon=0x0001a3 dither=1 samples=10000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Plus_50ppm_Dither gen_avg=2.000100000 app_avg=2.000100000 exp_avg=2.000099897 f_int=65.532762285 exp_f=65.532726726 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+CASE: Minus_50ppm_Dither epsilon=0xfffe5d dither=1 samples=10000
+RESET_OBSERVE rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+PASS: reset forces N_sel=divide-by-2 and both output clocks low
+RESULT_DATA Minus_50ppm_Dither gen_avg=1.999900000 app_avg=1.999900000 exp_avg=1.999900103 f_int=65.539315889 exp_f=65.539273601 f32=32.768019462 invalid=0
+PASS: Group-4 SDM never emits invalid N_sel=2'b11
+PASS: divider-applied average N matches requested average
+PASS: measured INT65K average frequency matches theory
+PASS: external T-FF frequency is one half of INT65K
+PASS: active divider ratio changed only at complete-period boundaries
+PASS: no invalid command was observed in any integration case
+RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.

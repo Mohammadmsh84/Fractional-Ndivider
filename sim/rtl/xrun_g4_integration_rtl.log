@@ -1,0 +1,211 @@
+xrun: 22.03-s001: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xrun	22.03-s001: Started on Aug 06, 2026 at 16:04:02 +0330
+xrun
+	-clean
+	-sv
+	-access +rwc
+	-timescale 1ns/1ps
+	-top tb_system_g4
+	-l sim/rtl/xrun_g4_integration_rtl.log
+	external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	rtl/fractional_n_divider.v
+	rtl/t_flip_flop.v
+	rtl/frac_div_system.v
+	rtl/frac_div_g4_top.sv
+	tb/tb_system_g4.sv
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: external/g4_sdm/rtl_sources/sdm_mash11_B.sv
+	module worklib.sdm_mash11:sv
+		errors: 0, warnings: 0
+file: rtl/fractional_n_divider.v
+	module worklib.fractional_n_divider:v
+		errors: 0, warnings: 0
+file: rtl/t_flip_flop.v
+	module worklib.t_flip_flop:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_system.v
+	module worklib.frac_div_system:v
+		errors: 0, warnings: 0
+file: rtl/frac_div_g4_top.sv
+	module worklib.frac_div_g4_top:sv
+		errors: 0, warnings: 0
+file: tb/tb_system_g4.sv
+	module worklib.tb_system_g4:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_system_g4
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.t_flip_flop:v <0x73b927ad>
+			streams:   2, words:   379
+		worklib.sdm_mash11:sv <0x3ad64ad5>
+			streams:  12, words:  6064
+		worklib.tb_system_g4:sv <0x0ab11739>
+			streams:  21, words: 48869
+		worklib.fractional_n_divider:v <0x0f39ed29>
+			streams:   9, words:  3786
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       6
+		Registers:              72      72
+		Scalar wires:            6       -
+		Vectored wires:          6       -
+		Always blocks:          15      15
+		Initial blocks:          7       7
+		Cont. assignments:       6       6
+		Pseudo assignments:      4       4
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_system_g4:sv
+Loading snapshot worklib.tb_system_g4:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /home/cad/cadence/XCELIUM220/tools/xcelium/files/xmsimrc
+xcelium> run
+============================================================
+ Week-4 integration: G4 RTL SDM + RTL divider + T-FF
+============================================================
+
+------------------------------------------------------------
+CASE: Zero  epsilon=0x000000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25  epsilon=0x200000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25  epsilon=0xe00000  dither=0  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Plus_50ppm  epsilon=0x0001a3  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Exact_Minus_50ppm  epsilon=0xfffe5d  dither=0  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Zero_Dither  epsilon=0x000000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=2000 N3=0 avg=2.0000000
+ applied   histogram: N1=0 N2=2000 N3=0 avg=2.0000000 expected=2.0000000
+ INT65K: measured=65.5360389 kHz expected=65.5360000 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_0.25_Dither  epsilon=0x200000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=0 N2=1000 N3=1000 avg=2.5000000
+ applied   histogram: N1=0 N2=1000 N3=1000 avg=2.5000000 expected=2.5000000
+ INT65K: measured=52.4288311 kHz expected=52.4288000 kHz error=0.00006%
+ CLK32K: measured=26.2144156 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_0.25_Dither  epsilon=0xe00000  dither=1  samples=2000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=1000 N2=1000 N3=0 avg=1.5000000
+ applied   histogram: N1=1000 N2=1000 N3=0 avg=1.5000000 expected=1.5000000
+ INT65K: measured=87.3813852 kHz expected=87.3813333 kHz error=0.00006%
+ CLK32K: measured=43.6906926 kHz half(INT65K) error=0.00000%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Plus_50ppm_Dither  epsilon=0x0001a3  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000
+ applied   histogram: N1=2501 N2=4997 N3=2502 avg=2.0001000 expected=2.0000999
+ INT65K: measured=65.5327623 kHz expected=65.5327267 kHz error=0.00005%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+
+------------------------------------------------------------
+CASE: Minus_50ppm_Dither  epsilon=0xfffe5d  dither=1  samples=10000
+ RESET_OBSERVE: rst_n=0 N_sel=01 INT65K_CLK=0 CLK32K=0
+ -> PASS: reset forces N_sel=divide-by-2 and both output clocks low
+ generated histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000
+ applied   histogram: N1=2502 N2=4997 N3=2501 avg=1.9999000 expected=1.9999001
+ INT65K: measured=65.5393159 kHz expected=65.5392736 kHz error=0.00006%
+ CLK32K: measured=32.7680195 kHz half(INT65K) error=0.00500%
+ -> PASS: Group-4 SDM never emits invalid N_sel=2'b11
+ -> PASS: divider-applied average N matches requested average
+ -> PASS: measured INT65K average frequency matches theory
+ -> PASS: external T-FF frequency is one half of INT65K
+ -> PASS: active divider ratio changed only at complete-period boundaries
+ -> PASS: no invalid command was observed in any integration case
+
+============================================================
+G4 INTEGRATION RESULT: PASS=52 FAIL=0
+ALL G4 INTEGRATION CHECKS PASSED.
+============================================================
+Simulation complete via $finish(1) at time 856708017795 PS + 5
+./tb/tb_system_g4.sv:534         $finish;
+xcelium> exit
+TOOL:	xrun	22.03-s001: Exiting on Aug 06, 2026 at 16:04:04 +0330  (total: 00:00:02)
